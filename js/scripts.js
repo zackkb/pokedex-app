@@ -41,9 +41,9 @@ let pokemonList = [{
 // The action "i++ which is the equivalent of i = i + 1"
 
 for (let i = 0; i < pokemonList.length; i++) {
-document.write('<br>' + pokemonList[i].name + (' , height: ') + pokemonList[i].height);
-}
-//This handles heights greater >= to 1.0
-if (pokemonList[i].height >= 1.0) {
-document.write(' - That\'s a big Pokemon!');
+    document.write('<br>' + pokemonList[i].name + (' , height: ') + pokemonList[i].height);
+    //This handles heights greater >= to 1.0
+    if (pokemonList[i].height >= 1.0) {
+        document.write(' - That\'s a big Pokemon!');
+    }
 }
