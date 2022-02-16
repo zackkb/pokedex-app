@@ -61,9 +61,15 @@ pokemonRepository.add({
     type: ["Water"],
 });
 
-pokemonRepository.getAll().forEach(function(pokemonList) {
-
-    if (pokemonList.height >= 1.5) {
-        document.write(' - That\'s a big Pokemon!');
-    } else document.write('<br>' + pokemonList.name + (' , height: ') + pokemonList.height);
+pokemonRepository.getAll().forEach(function(trait) {
+    if (trait.height > 1.0) {
+        document.write(
+            trait.name +
+            ' (height: ' +
+            trait.height +
+            'm) - ' +
+            "That's a big Pokemon!" +
+            '<br /><br />'
+        );
+    } else document.write(trait.name + ' (height: ' + trait.height + 'm)' + '<br /><br />');
 });
