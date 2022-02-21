@@ -1,7 +1,5 @@
-// IIFE for pokemonList
 let pokemonRepository = (function() {
-    // Array for pokemon
-    let pokemonList = [{
+    let repository = [{
             name: "Bulbasaur",
             height: 0.7,
             type: ["Grass", "Poison"]
@@ -38,22 +36,47 @@ let pokemonRepository = (function() {
         },
     ];
 
-    //Prints details of pokemon
     function add(pokemon) {
-        pokemonList.push(pokemon);
+        if (
+            typeof pokemon === "object" &&
+            "name" in pokemon &&
+            "height" in pokemon &&
+            "types" in pokemon
+        ) {
+            repository.push(pokemon);
+        } else {
+            console.log("pokemon is not correct");
+        }
     }
 
     function getAll() {
-        return pokemonList;
+        return repository;
+    }
+
+    function addListItem(pokemon) {
+        let pokemonList = document.querySelector(".pokemon-list");
+        let listpokemon = document.createElement("li");
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("button-class");
+        listpokemon.appendChild(button);
+        pokemonList.appendChild(listpokemon);
+        button.addEventListener("click", function() {
+            showDetails(pokemon);
+        });
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon.name);
     }
 
     return {
         add: add,
         getAll: getAll,
-
+        addListItem: addListItem,
+        showDetails: showDetails,
     };
 })();
-
 
 pokemonRepository.add({
     name: "Squirtle",
@@ -61,15 +84,8 @@ pokemonRepository.add({
     type: ["Water"],
 });
 
-pokemonRepository.getAll().forEach(function(trait) {
-    if (trait.height > 1.0) {
-        document.write(
-            trait.name +
-            ' (height: ' +
-            trait.height +
-            'm) - ' +
-            "That's a big Pokemon!" +
-            '<br /><br />'
-        );
-    } else document.write(trait.name + ' (height: ' + trait.height + 'm)' + '<br /><br />');
+console.log(pokemonRepository.getAll());
+
+pokemonRepository.getAll().forEach(function(pokemon) {
+    pokemonRepository.addListItem(pokemon);
 });
