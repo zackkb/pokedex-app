@@ -41,12 +41,13 @@ h1 {
 
 #loading {
 	margin: auto;
-	border: 8px solid #EAF0F6;
-	border-radius: 50%;
+	border: 6px solid #EAF0F6;
+	border-radius: 100%;
 	border-top: 8px solid #FF7A59;
-	width: 4rem;
-	height: 4rem;
+	width: 2rem;
+	height: 2rem;
 	animation: spinner 1s linear infinite;
+    visibility: hidden;
 }
 
 #loading.display {
