@@ -5,12 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokedex</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <h1>PokeDex</h1>
     <div id="loading"></div>
+    <button id="show-modal">Show modal</button>
+    <button id="show-dialog">Show dialog</button>
+    <div id="modal-container"></div>
     <ul class="pokemon-list"></ul>
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
