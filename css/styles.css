@@ -120,8 +120,8 @@ h1 {
 }
 
 .pokemon_picture {
-	height:  auto;
-	width: 60%;
+	margin-top: 20px;
+	max-width: 90%;
 }
 
 .pokemon-list {
