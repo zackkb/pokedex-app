@@ -40,6 +40,10 @@ h1 {
 	border: 2px solid #4caf50;
 }
 
+.button-class:hover {
+    animation: bounce 0.5s linear;
+}
+
 #loading {
 	margin: auto;
 	border: 6px solid #EAF0F6;
@@ -62,6 +66,22 @@ h1 {
 	to {
 		transform: rotate(360deg);
 	}
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 #modal-container {
