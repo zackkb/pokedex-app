@@ -8,12 +8,11 @@ let pokemonRepository = (function() {
 
     function add(pokemon) {
         if (
-            typeof pokemon === "object" &&
-            "name" in pokemon
-        ) {
-            pokemonList.push(pokemon);
-        } else {
-            console.log("Pokemon is not correct");
+            typeof pokemon === "object" && !Array.isArray(pokemon)) {
+            if (Object.keys(pokemon)[0] === 'name' &&
+                Object.keys(pokemon)[1] === 'detailsUrl') {
+                pokemonList.push(pokemon);
+            }
         }
     }
 
@@ -208,6 +207,8 @@ let pokemonRepository = (function() {
     });
     //End modal
 
+    //Object keys
+
     return {
         add: add,
         getAll: getAll,
@@ -218,6 +219,7 @@ let pokemonRepository = (function() {
     };
 })();
 
+//Call functions
 
 pokemonRepository.loadList().then(function() {
     pokemonRepository.getAll().forEach(function(pokemon) {
