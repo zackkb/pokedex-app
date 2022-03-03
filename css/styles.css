@@ -120,3 +120,43 @@ h1 {
 	max-width: 700px;
 	text-align: center;
 }
+
+.modal-close {
+	float: right;
+	-webkit-appearance: none;
+	border: 0;
+	background: none;
+	color: #777;
+	text-decoration: underline;
+}
+
+.modal h1 {
+	margin-top: 0;
+}
+
+.modal p {
+	margin-bottom: 0;
+}
+
+#modal-container {
+	display: none;
+}
+
+#modal-container.is-visible {
+	/* CSS for modal container - add your own desired CSS styles here */
+	display: block;
+}
+
+.pokemon_picture {
+	margin-top: 20px;
+	max-width: 90%;
+}
+
+.pokemon-list {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+} 
