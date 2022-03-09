@@ -1,20 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
 
-* {
-    box-sizing: border-box;
-}
-
-
 body {
-    overflow-y: hidden;
     background: #adc5b5;
     background: -webkkit-linear- gradient(to right, #d8ddd2, #ccbfea);
     background: linear-gradient(to right, #e7c8e8, #dddccc);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-family: 'Lato';
 }
 
@@ -46,19 +36,24 @@ input[type=text] {
 
 .btn,
 .btn-primary {
+    min-width: 90%;
+    padding: 20px 5px;
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
     background: #ffc600;
     background: linear-gradient(to right, #D4D3DD, #d9a800);
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    text-transform: capitalize;
+    border-radius: 5px;
     border: 1px white solid;
     transition: 0.5s linear;
-    text-transform: capitalize;
 }
 
 .pokemon-list {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
