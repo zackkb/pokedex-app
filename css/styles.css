@@ -14,8 +14,8 @@ h1 {
 }
 
 .navbar {
-    background: var(--primary-color);
-    border-bottom: 1px solid white;
+    background: white;
+    border-bottom: 1px solid black;
 }
 
 #myInput {
@@ -23,6 +23,7 @@ h1 {
     margin: 0rem 1rem;
     border: none;
     border-radius: 5px;
+    background-color: rgb(204, 187, 211);
 }
 
 input[type=text] {
@@ -30,8 +31,8 @@ input[type=text] {
 }
 
 .modal-content {
-    background: transparent;
-    color: white;
+    background: white;
+    color: black;
 }
 
 .btn,
