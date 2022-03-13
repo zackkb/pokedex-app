@@ -41,7 +41,7 @@ input[type=text] {
     padding: 20px 5px;
     margin: 0.5rem;
     background: #ffc600;
-    background: linear-gradient(to right, #D4D3DD, #d9a800);
+    background: linear-gradient(to right, #d8cbae, #d9a800);
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     text-transform: capitalize;
     border-radius: 5px;
